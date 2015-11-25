@@ -1,0 +1,37 @@
+<head>
+  <title>meteor-hello</title>
+</head>
+
+<body>
+  <h1>Rock, Paper, Scissors!</h1>
+
+  <!-- {{> hello}} -->
+</body>
+
+<template name="player1">
+	{{> commonUI}}
+	<!-- {{> retry}} -->
+</template>
+
+<template name="player2">
+	{{> commonUI}}
+	<!-- {{> retry}} -->
+</template>
+
+<template name="commonUI">
+	<p>Choose one!</p>
+	<button id='0'>Rock</button>
+	<button id='1'>Scissors</button>
+	<button id='2'>Paper</button>
+	<p>{{result}}</p>
+	<button id='retry'>Try again!</button>
+</template>
+
+<template name="retry">
+	<button id='retry'>Try again!</button>
+</template>
+
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
