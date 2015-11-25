@@ -1,6 +1,13 @@
 # Meteor- Rock, Scissors, Paper!
-  - Toy project playing Rock, Scissors, Paper!
-  - Each player enters at /player1 and /player2
-  - Choose among Rock, Scissors, and Paper, and wait for another to choose.
-  - Once both players chose, you will see who won the game.
-  - Click "Try again!" button to play again.
+  - How to play
+    - Toy project playing Rock, Scissors, Paper!
+    - Each player enters at /player1 and /player2
+    - Choose among Rock, Scissors, and Paper, and wait for another to choose.
+    - Once both players chose, you will see who won the game.
+    - Click "Try again!" button to play again.
+  - Code description
+    - Choices of Players is stored in MongoDB with ID of 'player1_choice' and 'player2_choice' relatively.
+      - Initial value is -1. 
+    - Iron Router is used for routing URLs of /player1 and /player2
+    - When a user clicks button of Rock, Scissors, Paper, it updates the value of playerN_choice to 0, 1, 2 accordingly. When the user clicks 'Try again' button, it initializes the value back to -1.
+    - In case only one of the two users clicked the button, 'result' shows 'waiting...' message. Only if both of users decided their choices, it shows the result - who won, and who lost the game, or if the game was drawn, the 'result' message indicates that.
